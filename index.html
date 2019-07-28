@@ -1,10 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>chex quest stuff</title>
+	<title>chex quest</title>
+	<meta lang="en"/>
+	<meta charset="utf8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<link rel="stylesheet" href="normalize.min.css"/>
+	<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-	<a href="intro.mov">intro.mov</a><br/>
-	<a href="end.mov">end.mov</a>
+	<!-- intro slide -->
+	<section>
+		<img src="img/cereal.jpg"/>
+		<video playsinline autoplay loop muted="true" src="video/milk.mp4"></video>
+		<div>
+			<h1>a presentation about chex quest</h1>
+			<h2>by karl hohn</h2>
+		</div>
+	</section>
+
+	<!-- chex quest cover -->
+	<section>
+		<img src="img/Chex_Quest-front_cover.png"/>
+		<span class="source"><a href="https://en.wikipedia.org/wiki/Chex_Quest#/media/File:Chex_Quest-front_cover.png" target="_blank">wikipedia</a>
+	</section>
+
+	<!-- intro video -->
+	<section>
+		<video controls src="video/intro.mp4"></video>
+		<span class="source">original cd</span>
+	</section>
+
+	<!-- picture of the real cd copy -->
+	<section>
+		<img src="img/Chex_Quest-front_cover.png"/> <!-- PLACEHOLDER -->
+		<span class="source"><a href="https://en.wikipedia.org/wiki/Chex_Quest#/media/File:Chex_Quest-front_cover.png" target="_blank">wikipedia</a>
+	</section>
+
+	<!-- 1906 cornflakes package -->
+	<section>
+		<img src="img/CornFlakesPackage1906.jpg"/>
+		<span class="source"><a href="https://en.wikipedia.org/wiki/Kellogg's#/media/File:CornFlakesPackage1906.jpg" target="_blank">wikipedia</a>
+	</section>
+
+	<!-- funny jungleland moving pictures book, 1907 -->
+	<section>
+		<img src="img/jungleland/IMG_1113.jpg"/>
+		<span class="source"><a href="http://mikechasar.blogspot.com/2015/01/a-glee-for-mixed-voices-wk-kelloggs.html">poetry &amp; popular culture (blogspot)</a></span>
+	</section>
+	<section>
+		<img src="img/jungleland/IMG_1113-zoom.jpg"/>
+		<span class="source"><a href="http://mikechasar.blogspot.com/2015/01/a-glee-for-mixed-voices-wk-kelloggs.html">poetry &amp; popular culture (blogspot)</a></span>
+	</section>
+	<section>
+		<img src="img/jungleland/IMG_1122.JPG"/>
+		<span class="source"><a href="http://mikechasar.blogspot.com/2015/01/a-glee-for-mixed-voices-wk-kelloggs.html">poetry &amp; popular culture (blogspot)</a></span>
+	</section>
+	<section>
+		<img src="img/jungleland/IMG_1120.jpg"/>
+		<span class="source"><a href="http://mikechasar.blogspot.com/2015/01/a-glee-for-mixed-voices-wk-kelloggs.html">poetry &amp; popular culture (blogspot)</a></span>
+	</section>
+	<section>
+		<img src="img/jungleland/IMG_1128.jpg"/>
+		<span class="source"><a href="http://mikechasar.blogspot.com/2015/01/a-glee-for-mixed-voices-wk-kelloggs.html">poetry &amp; popular culture (blogspot)</a></span>
+	</section>
+
+	<!-- general mills skippy cards, 1933 -->
+
+	<!-- little orphan annie decoder rings, 1935 -->
+
+	<!-- kellogg's pep cereal pin-back badges, 1945 -->
+
+	<!-- general assortment of  -->
+
+	<script>
+		var slides = document.getElementsByTagName('section');
+
+		for (var i = 0, ii=slides.length; i<ii; i++) {
+			var slide = slides[i];
+			slide.style.display = 'none';
+		}
+
+		slides[0].style.display = 'block';
+
+		curSlide = 0;
+
+		function changeSlides(e) {
+			if (e.code == 'ArrowRight' && curSlide < (slides.length - 1)) {
+				slides[curSlide].style.display = 'none';
+				curSlide++;
+				slides[curSlide].style.display = 'block';
+			} else if (e.code == 'ArrowLeft' && curSlide > 0) {
+				slides[curSlide].style.display = 'none';
+				curSlide--;
+				slides[curSlide].style.display = 'block';
+			} else {
+				return;
+			}
+		}
+
+		document.addEventListener('keyup', changeSlides);
+	</script>
 </body>
 </html>

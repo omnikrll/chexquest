@@ -1,0 +1,81 @@
+body {
+	background: #283747;
+	color: white;
+	text-align: center;
+}
+
+section {
+	position: absolute;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+section img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 88%;
+	width: auto;
+}
+
+section video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 88%;
+	width: auto;
+}
+
+section:first-child video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: auto !important;
+	opacity: 0.8;
+	z-index: 1;
+}
+
+section:first-child img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	transform: none !important;
+	opacity: 0.2;
+	z-index: 2;
+}
+
+section:first-child div {
+	z-index: 3;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+}
+
+.source {
+	display: inline-block;
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	font-size: 12px;
+}
+
+.source:before {
+	content: "source: ";
+}
+
+.source a:link,
+.source a:focus,
+.source a:hover,
+.source a:active,
+.source a:visited {
+	color: white;
+}
