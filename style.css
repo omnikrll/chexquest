@@ -12,22 +12,25 @@ section {
 	overflow: hidden;
 }
 
-section img {
+section img,
+section video,
+section embed,
+section .text {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+section img,
+section video {
 	height: 88%;
 	width: auto;
 }
 
-section video {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	height: 88%;
-	width: auto;
+section embed {
+	width: 640px;
+	height: 480px;
 }
 
 section:first-child video {
@@ -51,12 +54,8 @@ section:first-child img {
 	z-index: 2;
 }
 
-section:first-child div {
+section:first-child .text {
 	z-index: 3;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	color: black;
 }
 
